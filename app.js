@@ -1,7 +1,7 @@
 'use strict';
 
 var guestName = prompt('What is your name?');
-alert('Hi '+ guestName + ', nice to meet you.');
+alert('Hi ' + guestName + ', nice to meet you.');
 
 //Question 1
 var boneAns = prompt('Alright ' + guestName + ', have I ever broken a bone?').toLowerCase();
