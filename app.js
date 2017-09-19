@@ -5,7 +5,6 @@ alert('Hi '+ guestName + ', nice to meet you.');
 
 //Question 1
 var boneAns = prompt('Alright ' + guestName + ', have I ever broken a bone?').toLowerCase();
-//boneAns.toLowerCase();
 
 if (boneAns === 'y' || boneAns === 'yes'){
   alert('Correct! I have broken my collar bone during a Football scrimmage');
@@ -29,7 +28,7 @@ var islandAns = prompt('Alright, now that you know that I grew up on an island m
 if(islandAns === 'bainbridge island' || islandAns === 'bainbridge'){
   alert('Correct! My home is Bainbridge Island Washington! We don\'t have any palm trees but we do have plenty of strawberries! ');
 } else {
-  alert('That is the wrong Island! My home is Bainbridge Island Washington! We don\'t have any palm trees but we do have plenty of strawberries! ')
+  alert('That is the wrong Island! My home is Bainbridge Island Washington! We don\'t have any palm trees but we do have plenty of strawberries! ');
 }
 
 //Question 4
@@ -38,7 +37,14 @@ var lowesAns = prompt('Okay, now I recently quit my job at Lowe\'s. I was a spec
 if(lowesAns === 'flooring'){
   alert('That is correct! I was a flooring specialist at the Bellingham Lowe\'s store for the past year and a half. I had a great time helping customers with their special orders ');
 } else {
-  alert('Wrong department! But pretty close');
+  alert('Wrong department! But pretty close! My favorite departments were the Garden & Lumber departments for all the smells.');
 }
 
 //Question 5
+var videogameAns = prompt('Finally, what is my favorite videogame franchise?').toLowerCase();
+
+if(videogameAns === 'halo') {
+  alert('That is astonishingly right! How\'d you get to know that?? But regardless Halo is such a great franchise from the music to the books, the Halo universe really is something else man.');
+} else {
+  alert('I don\'t know why I asked that, it is pretty specific. But regardless Halo is the best videogame franchise around, from the orchestral music to the books, the Halo franchise is the best. ');
+};
