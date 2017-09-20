@@ -134,38 +134,43 @@ for (var j = 1; j <= 6; j++){
     if(j === 6){
       alert('Oh no! You\'ve used up your 6 guesses. All the possible answers were \n' + schoolArray + '\n Thank you for playing!');
       break;
-    }
+    };
   }else if(schoolGuess === schoolArray[2]){
     alert('Washington State University is a great school but not the correct one!');
     if(j === 6){
       alert('Oh no! You\'ve used up your 6 guesses. All the possible answers were \n' + schoolArray + '\n Thank you for playing!');
       break;
-    }
+    };
   }else if(schoolGuess === schoolArray[3]){
     alert('Central Washington University is a great school but not the correct one!');
     if(j === 6){
       alert('Oh no! You\'ve used up your 6 guesses. All the possible answers were \n' + schoolArray + '\n Thank you for playing!');
       break;
-    }
+    };
   }else if(schoolGuess === schoolArray[4]){
     alert('Eastern Washington University is a great school but not the correct one!');
     if(j === 6){
       alert('Oh no! You\'ve used up your 6 guesses. All the possible answers were \n' + schoolArray + '\n Thank you for playing!');
       break;
-    }
+    };
   }else if(schoolGuess === schoolArray[5]){
     alert('Gonzaga University is a great school but not the correct one!');
     if(j === 6){
       alert('Oh no! You\'ve used up your 6 guesses. All the possible answers were \n' + schoolArray + '\n Thank you for playing!');
       break;
-    }
+    };
   }else if(schoolGuess === schoolArray[6]){
     alert('University of Puget Sound is a great school but not the correct one!');
     if(j === 6){
       alert('Oh no! You\'ve used up your 6 guesses. All the possible answers were \n' + schoolArray + '\n Thank you for playing!');
       break;
     };
+  }else{
+    alert('I don\'t believe that\'s a school in Washington... try ' + schoolArray);
+    if(j === 6){
+      alert('Oh no! You\'ve used up your 6 guesses. All the possible answers were \n' + schoolArray + '\n Thank you for playing!');
+      break;
+    };
   };
 };
-
 alert('You got ' + score + ' out of 7 questions correct!');
