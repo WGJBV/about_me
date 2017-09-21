@@ -7,59 +7,72 @@ console.log('User\'s name is ' + guestName);
 
 alert('Hi ' + guestName + ', nice to meet you.');
 
-//Question 1
-var question1 = prompt('Alright ' + guestName + ', have I ever broken a bone?').toLowerCase();
+//----Define questionaire
 
-if ( question1 === 'y' || question1 === 'yes'){
-  alert('Correct! I have broken my collar bone during a Football scrimmage');
-  score++;
-} else {
-  alert('That is incorrect. I have broken my collar bone.');
+var massiveQuestionArray = [
+  [
+    'Alright ' + guestName + ', have I ever broken a bone?',
+    ['yes','y'],
+    'Correct! I have broken my collar bone during a Football scrimmage',
+    'That is incorrect. I have broken my collar bone.'
+  ],
+  [
+    'Do I have any tattoos?',
+    ['no','n'],
+    'Correct! I have always thought about getting a tattoo of the outline of the island I grew up on, but I am very indecisive and have not gone through with it.',
+    'Incorrect! Granted I have always thought about getting a tattoo of the outline of the island I grew up on, but I am very indecisive and have not gone through with it.'
+  ],
+  [
+    'Alright, now that you know that I grew up on an island my question is, what is the island\'s name?',
+    ['bainbridge island','bainbridge'],
+    'Correct! My home is Bainbridge Island Washington! We don\'t have any palm trees but we do have plenty of strawberries!',
+    'That is the wrong Island! My home is Bainbridge Island Washington! We don\'t have any palm trees but we do have plenty of strawberries!'
+  ],
+  [
+    'Alright, now that you know that I grew up on an island my question is, what is the island\'s name?',
+    ['bainbridge island','bainbridge'],
+    'Correct! My home is Bainbridge Island Washington! We don\'t have any palm trees but we do have plenty of strawberries!',
+    'That is the wrong Island! My home is Bainbridge Island Washington! We don\'t have any palm trees but we do have plenty of strawberries!'
+  ],
+  [
+    'Okay, now I recently quit my job at Lowe\'s. I was a specialist in what Department there?',
+    ['flooring'],
+    'That is correct! I was a flooring specialist at the Bellingham Lowe\'s store for the past year and a half. I had a great time helping customers with their special orders ',
+    'Wrong department! But pretty close! My favorite departments were the Garden & Lumber departments for all the smells.'
+  ],
+  [
+    'Finally, what is my favorite videogame franchise?',
+    ['halo'],
+    'That is astonishingly right! How\'d you get to know that?? But regardless Halo is such a great franchise from the music to the books, the Halo universe really is something else man.',
+    'I don\'t know why I asked that, it is pretty specific. But regardless Halo is the best videogame franchise around, from the orchestral music to the books, the Halo franchise is the best.'
+  ]
+];
+
+//----Define Question Function
+function question(questions) {
+  var arraySize = questions.length;
+  var index = 0;
+  while(index < arraySize){
+    var userAnswer = prompt(questions[index][0]).toLowerCase();
+    var userAnswerBool = false;
+    for(i = 0; i < answer.length; i++){
+      if(questions[index][1][i] === userAnswer){
+        userAnswerBool = true;
+      }
+    }
+    if (userAnswerBool){
+      alert(questions[index][2]);
+      score++;
+    } else {
+      alert(questions[index][3]);
+    }
+    console.log('Question # ' + index + ' was, \n ' + question + ' \n User\'s input : ' + userAnswer + '\n Correct answer: ' + answer[0]);
+  }
 }
-console.log('Question 1 was, \n Have I ever broken a bone? \n User\'s input : ' + question1 + '\n Correct answer: yes');
 
-//Question 2
-var question2 = prompt('Do I have any tattoos?').toLowerCase();
+//Questionssssssssssx
+question(massiveQuestionArray);
 
-if(question2 === 'n' || question2 === 'no'){
-  alert('Correct! I have always thought about getting a tattoo of the outline of the island I grew up on, but I am very indecisive and have not gone through with it.');
-  score++;
-} else {
-  alert('Incorrect! Granted I have always thought about getting a tattoo of the outline of the island I grew up on, but I am very indecisive and have not gone through with it.');
-}
-console.log('Question 2 was, \n Do I have any tattoos? \n User\'s input : ' + question2 + '\n Correct answer: no');
-//Question 3
-
-var question3 = prompt('Alright, now that you know that I grew up on an island my question is, what is the island\'s name?').toLowerCase();
-
-if(question3 === 'bainbridge island' || question3 === 'bainbridge'){
-  alert('Correct! My home is Bainbridge Island Washington! We don\'t have any palm trees but we do have plenty of strawberries! ');
-  score++;
-} else {
-  alert('That is the wrong Island! My home is Bainbridge Island Washington! We don\'t have any palm trees but we do have plenty of strawberries! ');
-}
-console.log('Question 3 was, \n What Island did I grow up on? \n User\'s input : ' + question3 + '\n Correct answer: bainbridge');
-//Question 4
-var question4 = prompt('Okay, now I recently quit my job at Lowe\'s. I was a specialist in what Department there?').toLowerCase();
-
-if(question4 === 'flooring'){
-  alert('That is correct! I was a flooring specialist at the Bellingham Lowe\'s store for the past year and a half. I had a great time helping customers with their special orders ');
-  score++;
-} else {
-  alert('Wrong department! But pretty close! My favorite departments were the Garden & Lumber departments for all the smells.');
-}
-console.log('Question 4 was, \n I was a specialist in which department at Lowe\'s? \n User\'s input : ' + question4 + '\n Correct answer: flooring');
-//Question 5
-var question5 = prompt('Finally, what is my favorite videogame franchise?').toLowerCase();
-
-if(question5 === 'halo') {
-  alert('That is astonishingly right! How\'d you get to know that?? But regardless Halo is such a great franchise from the music to the books, the Halo universe really is something else man.');
-  score++;
-} else {
-  alert('I don\'t know why I asked that, it is pretty specific. But regardless Halo is the best videogame franchise around, from the orchestral music to the books, the Halo franchise is the best. ');
-};
-console.log('Question 5 was, \n What is my favorite videogame franchise? \n User\'s input : ' + question5 + '\n Correct answer: halo');
-//Question 6
 alert('Alright ' + guestName + ', I have a guessing game for you. And I\'ll give you 4 guesses!');
 
 for (var i = 1 ; i <= 4 ; i++){
