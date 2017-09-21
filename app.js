@@ -55,7 +55,7 @@ function question(questions) {
   while(index < arraySize){
     var userAnswer = prompt(questions[index][0]).toLowerCase();
     var userAnswerBool = false;
-    for(i = 0; i < answer.length; i++){
+    for(i = 0; i < questions[index][1].length; i++){
       if(questions[index][1][i] === userAnswer){
         userAnswerBool = true;
       }
@@ -66,7 +66,8 @@ function question(questions) {
     } else {
       alert(questions[index][3]);
     }
-    console.log('Question # ' + index + ' was, \n ' + question + ' \n User\'s input : ' + userAnswer + '\n Correct answer: ' + answer[0]);
+    console.log('Question # ' + (index + 1) + ' was, \n ' + question + ' \n User\'s input : ' + userAnswer + '\n Correct answer: ' + questions[index][1][0]);
+    index++;
   }
 }
 
