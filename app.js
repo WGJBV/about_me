@@ -66,7 +66,7 @@ function question(questions) {
     } else {
       alert(questions[index][3]);
     }
-    console.log('Question # ' + (index + 1) + ' was, \n ' + question + ' \n User\'s input : ' + userAnswer + '\n Correct answer: ' + questions[index][1][0]);
+    console.log('Question # ' + (index + 1) + ' was, \n ' + questions[index][0] + ' \n User\'s input : ' + userAnswer + '\n Correct answer: ' + questions[index][1][0]);
     index++;
   }
 }
