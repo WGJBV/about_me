@@ -72,6 +72,7 @@ function question(questions) {
 }
 
 //Questionssssssssssx
+
 question(massiveQuestionArray);
 
 alert('Alright ' + guestName + ', I have a guessing game for you. And I\'ll give you 4 guesses!');
@@ -187,4 +188,5 @@ for (var j = 1; j <= 6; j++){
     };
   };
 };
+
 alert('You got ' + score + ' out of 7 questions correct!');
